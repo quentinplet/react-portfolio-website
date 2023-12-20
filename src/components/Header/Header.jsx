@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import "../../App.css";
+import styled from "styled-components";
 
 const Header = () => {
   const [Toggle, setToggle] = useState(false);
