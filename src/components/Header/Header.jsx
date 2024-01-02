@@ -6,7 +6,7 @@ const Header = () => {
   const [Toggle, setToggle] = useState(false);
   const showMenu = () => setToggle(!Toggle);
   return (
-    <HeaderStyled>
+    <HeaderStyled className="header">
       <nav className="nav container">
         <a href="index.html" className="nav__logo">
           Smith
@@ -79,7 +79,7 @@ const HeaderStyled = styled.header`
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--container-color);
 
   .nav {
     height: calc(var(--header-height) + 1.5rem);

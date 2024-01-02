@@ -145,6 +145,11 @@ img {
   display: grid;
   gap: 1.5rem;
 }
+/* 
+.main {
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+} */
 
 /*=============== BUTTONS ===============*/
 .button {
