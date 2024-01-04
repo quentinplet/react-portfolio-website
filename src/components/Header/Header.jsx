@@ -3,8 +3,23 @@ import "../../App.css";
 import styled from "styled-components";
 
 const Header = () => {
+  /*===== Change Background Header =====*/
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header");
+    if (window.scrollY >= 80) {
+      header.classList.add("scroll-header");
+    } else {
+      header.classList.remove("scroll-header");
+    }
+  });
+
+  /*===== Toggle Menu =====*/
   const [Toggle, setToggle] = useState(false);
   const showMenu = () => setToggle(!Toggle);
+
+  const [activeNav, setActiveNav] = useState("#home");
+  const handleNav = (href) => setActiveNav(href);
+
   return (
     <HeaderStyled className="header">
       <nav className="nav container">
@@ -14,42 +29,78 @@ const Header = () => {
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
-              <a href="#home" className="nav__link active-link">
+              <a
+                href="#home"
+                onClick={() => handleNav("#home")}
+                className={
+                  activeNav === "#home" ? "nav__link active-link" : "nav__link"
+                }
+              >
                 <i className="uil uil-estate nav__icon"></i>
                 Home
               </a>
             </li>
 
             <li className="nav__item">
-              <a href="#about" className="nav__link">
+              <a
+                href="#portfolio"
+                onClick={() => handleNav("#portfolio")}
+                className={
+                  activeNav === "#portfolio"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
+                <i className="uil uil-scenery nav__icon"></i>
+                Portfolio
+              </a>
+            </li>
+
+            <li className="nav__item">
+              <a
+                href="#about"
+                onClick={() => handleNav("#about")}
+                className={
+                  activeNav === "#about" ? "nav__link active-link" : "nav__link"
+                }
+              >
                 <i className="uil uil-user nav__icon"></i>
                 About
               </a>
             </li>
 
             <li className="nav__item">
-              <a href="#skills" className="nav__link">
+              <a
+                href="#skills"
+                onClick={() => handleNav("#skills")}
+                className={
+                  activeNav === "#skills"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
                 <i className="uil uil-file-alt nav__icon"></i>
                 Skills
               </a>
             </li>
 
-            <li className="nav__item">
+            {/* <li className="nav__item">
               <a href="#services" className="nav__link">
                 <i className="uil uil-briefcase-alt nav__icon"></i>
                 Services
               </a>
-            </li>
+            </li> */}
 
             <li className="nav__item">
-              <a href="#portfolio" className="nav__link">
-                <i className="uil uil-scenery nav__icon"></i>
-                Porfolio
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#contact" className="nav__link">
+              <a
+                href="#contact"
+                onClick={() => handleNav("#contact")}
+                className={
+                  activeNav === "#contact"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
                 <i className="uil uil-message nav__icon"></i>
                 Contact
               </a>
@@ -107,7 +158,7 @@ const HeaderStyled = styled.header`
     font-size: var(--small-font-size);
     color: var(--title-color);
     font-weight: var(--font-medium);
-    transition: 0.3s;
+    transition: 0.1s;
   }
 
   .nav__icon,
@@ -120,9 +171,21 @@ const HeaderStyled = styled.header`
   .active-link,
   .nav__link:hover {
     color: var(--title-color-dark);
+    font-weight: var(--font-semi-bold);
+  }
+
+  /* Change background header */
+  &.scroll-header {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
   }
 
   /*=============== BREAKPOINTS ===============*/
+
+  @media screen and (max-width: 992px) {
+    .nav__link {
+      font-size: var(--smaller-font-size);
+    }
+  }
   /* For medium devices */
   @media screen and (max-width: 768px) {
     top: initial;
