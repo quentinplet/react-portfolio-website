@@ -35,7 +35,7 @@ const Footer = () => {
             <i className="bx bxl-github"></i>
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://linkedin.com//in/quentin-plet"
             className="footer__social-link"
             target="_blank"
           >

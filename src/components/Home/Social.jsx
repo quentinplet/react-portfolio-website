@@ -27,7 +27,7 @@ const Social = () => {
         <span className="home__social-icon-label">Github</span>
       </a>
       <a
-        href="https://linkedin.com/"
+        href="https://linkedin.com//in/quentin-plet"
         className="home__social-icon"
         target="_blank"
       >
