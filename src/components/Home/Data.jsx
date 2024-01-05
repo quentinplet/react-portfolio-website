@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CV from "../../../public/assets/John-Cv.pdf";
+import CV from "../../../public/assets/CV_Quentin_Plet.pdf";
 
 const Data = () => {
   return (
