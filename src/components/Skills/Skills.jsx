@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
+import Audio from "./Audio";
 
 const Skills = () => {
   return (
@@ -11,7 +12,8 @@ const Skills = () => {
 
       <div className="skills__container container grid">
         <Frontend />
-        <Backend />
+        {/* <Backend /> */}
+        <Audio />
       </div>
     </SkillsStyled>
   );
