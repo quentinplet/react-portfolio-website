@@ -51,7 +51,10 @@ const WorkStyled = styled.section`
   }
 
   .work__img {
-    width: 295px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 200px;
     border-radius: 1rem;
     margin-bottom: var(--mb-1);
   }
