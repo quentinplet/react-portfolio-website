@@ -43,10 +43,17 @@ const HomeStyled = styled.section`
   .home__social-icon {
     font-size: 1.25rem;
     color: var(--title-color);
-    transition: 0.3s;
+    /* transition: 0.3s; */
 
     &:hover {
       color: var(--title-color-dark);
+      scale: 1.1;
+    }
+
+    .home__social-icon-label {
+      margin-left: 0.4rem;
+      font-size: var(--small-font-size);
+      color: var(--text-color);
     }
   }
 
@@ -85,7 +92,7 @@ const HomeStyled = styled.section`
   }
 
   .home__img {
-    background: url(../../assets//profile.jpg);
+    background: url(../../assets//picture-profile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -94,7 +101,8 @@ const HomeStyled = styled.section`
     justify-self: center;
     width: 300px;
     height: 300px;
-    animation: profile__animate 8s ease-in-out infinite 1s;
+    border-radius: 50%;
+    /* animation: profile__animate 8s ease-in-out infinite 1s; */
   }
 
   @keyframes profile__animate {
@@ -141,12 +149,24 @@ const HomeStyled = styled.section`
     color: var(--title-color);
   }
 
+  .home__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    font-size: var(--small-font-size);
+  }
+
   /*=============== BREAKPOINTS ===============*/
   /* For large devices */
   @media screen and (max-width: 992px) {
     .home__content {
       grid-template-columns: 100px repeat(2, 1fr);
       column-gap: 1.25rem;
+    }
+
+    .home__title {
+      font-size: var(--h1-font-size);
     }
 
     .home__hand {
@@ -183,17 +203,34 @@ const HomeStyled = styled.section`
   /* For medium devices */
   @media screen and (max-width: 768px) {
     .home__content {
-      grid-template-columns: 0.5fr 3fr;
+      /* grid-template-columns: 0.5fr 3fr; */
+      display: flex;
+      flex-direction: column;
       padding-top: 3.5rem;
+    }
+
+    .home__social {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 1.5rem;
     }
 
     .home__img {
       order: initial;
-      justify-self: initial;
+      justify-self: center;
     }
 
     .home__data {
       grid-column: 1/3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .home__description {
+        width: 70%;
+        text-align: center;
+      }
     }
 
     .home__img {
