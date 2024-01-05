@@ -68,6 +68,13 @@ const WorkStyled = styled.section`
     font-size: var(--normal-dont-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-5);
+    text-align: center;
+  }
+
+  .Works__links {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 0.5rem;
   }
 
   .work__button {
@@ -85,6 +92,10 @@ const WorkStyled = styled.section`
 
   .work__button:hover .work__button-icon {
     transform: translateX(0.25rem);
+  }
+
+  .work__button:hover .work__button-icon-github {
+    scale: 1.1;
   }
 
   /*active work*/

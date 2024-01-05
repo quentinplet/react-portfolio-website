@@ -8,18 +8,30 @@ export const projectsData = [
     image: Work1,
     title: "Crazee Burger",
     category: "web",
+    links: {
+      demo: "https://crazee-burger-orcin.vercel.app/",
+      github: "https://github.com/quentinplet/crazee-burger",
+    },
   },
   {
     id: 2,
     image: Work2,
     title: "WAM Sampler",
     category: "audio",
+    links: {
+      demo: "https://quentinplet.github.io/Sampler-WAM/",
+      github: "https://github.com/quentinplet/Sampler-WAM",
+    },
   },
   {
     id: 3,
     image: Work3,
     title: "Audio Visualizer",
     category: "audio",
+    links: {
+      demo: "https://quentinplet.github.io/Installation-Curiosity/",
+      github: "https://github.com/quentinplet/Installation-Curiosity",
+    },
   },
   //   {
   //     id: 2,
