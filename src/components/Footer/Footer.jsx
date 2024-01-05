@@ -5,12 +5,12 @@ const Footer = () => {
   return (
     <FooterStyled className="footer">
       <div className="footer__container container">
-        <h1 className="footer__title">Smith</h1>
+        <h1 className="footer__title">Quentin Plet</h1>
 
         <ul className="footer__list">
           <li>
-            <a href="#about" className="footer__link">
-              About
+            <a href="#" className="footer__link">
+              Home
             </a>
           </li>
 
@@ -28,7 +28,7 @@ const Footer = () => {
         </ul>
         <div className="footer__social">
           <a
-            href="https://github.com/"
+            href="https://github.com/quentinplet"
             className="footer__social-link"
             target="_blank"
           >
