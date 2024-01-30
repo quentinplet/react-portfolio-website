@@ -19,8 +19,8 @@ export const projectsData = [
     title: "WAM Sampler",
     category: "audio",
     links: {
-      demo: "https://quentinplet.github.io/Sampler-WAM/",
-      github: "https://github.com/quentinplet/Sampler-WAM",
+      demo: "https://quentinplet.github.io/Wam-Sampler/",
+      github: "https://github.com/quentinplet/Wam-Sampler",
     },
   },
   {
