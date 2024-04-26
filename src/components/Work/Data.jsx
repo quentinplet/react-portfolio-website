@@ -1,6 +1,8 @@
 import Work1 from "../../../public/assets/Crazee-burger-preview.png";
 import Work2 from "../../../public/assets/Sampler-preview-2.png";
-import Work3 from "../../../public/assets/Audio-visualizer.png";
+import Work3 from "../../../public/assets/kusmi-tea-landing-page-preview.png";
+import Work4 from "../../../public/assets/rick-morty-preview.png";
+import Work5 from "../../../public/assets/Audio-visualizer.png";
 
 export const projectsData = [
   {
@@ -26,6 +28,27 @@ export const projectsData = [
   {
     id: 3,
     image: Work3,
+    title: "Kusmi Tea Landing Page",
+    category: "web",
+    links: {
+      demo: "https://quentinplet.github.io/test-integration-kusmi-tea/",
+      github: "https://github.com/quentinplet/test-integration-kusmi-tea",
+    },
+  },
+  {
+    id: 4,
+    image: Work4,
+    title: "Rick and Morty",
+    category: "web",
+    links: {
+      demo: "https://react-morty-quentin.vercel.app/",
+      github: "https://github.com/quentinplet/react-morty-quentin",
+    },
+  },
+
+  {
+    id: 5,
+    image: Work5,
     title: "Audio Visualizer",
     category: "audio",
     links: {
