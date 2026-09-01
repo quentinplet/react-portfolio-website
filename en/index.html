@@ -313,11 +313,15 @@
 
         <div class="work__container container grid">
           <div class="work__card" data-category="web">
-            <a
-              href="https://crazee-burger-orcin.vercel.app/"
+            <button
+              type="button"
               class="work__img__link"
-              target="_blank"
-              rel="noopener"
+              data-title="Crazee Burger"
+              data-description="A fast-food style ordering interface built with React, featuring a live cart and dynamic menu display."
+              data-image="/assets/Crazee-burger-preview.png"
+              data-image-alt="Crazee Burger project preview"
+              data-demo="https://crazee-burger-orcin.vercel.app/"
+              data-github="https://github.com/quentinplet/crazee-burger"
             >
               <img
                 src="/assets/Crazee-burger-preview.png"
@@ -327,7 +331,7 @@
                 width="640"
                 height="200"
               />
-            </a>
+            </button>
             <h3 class="work__title">Crazee Burger</h3>
             <div class="work__links">
               <a
@@ -351,11 +355,15 @@
           </div>
 
           <div class="work__card" data-category="audio">
-            <a
-              href="https://quentinplet.github.io/Wam-Sampler/"
+            <button
+              type="button"
               class="work__img__link"
-              target="_blank"
-              rel="noopener"
+              data-title="WAM Sampler"
+              data-description="An interactive audio sampler built on the Web Audio Module standard, for triggering and manipulating sounds right in the browser."
+              data-image="/assets/Sampler-preview-2.png"
+              data-image-alt="WAM Sampler project preview"
+              data-demo="https://quentinplet.github.io/Wam-Sampler/"
+              data-github="https://github.com/quentinplet/Wam-Sampler"
             >
               <img
                 src="/assets/Sampler-preview-2.png"
@@ -365,7 +373,7 @@
                 width="640"
                 height="200"
               />
-            </a>
+            </button>
             <h3 class="work__title">WAM Sampler</h3>
             <div class="work__links">
               <a
@@ -389,11 +397,15 @@
           </div>
 
           <div class="work__card" data-category="web">
-            <a
-              href="https://quentinplet.github.io/test-integration-kusmi-tea/"
+            <button
+              type="button"
               class="work__img__link"
-              target="_blank"
-              rel="noopener"
+              data-title="Kusmi Tea Landing Page"
+              data-description="A pixel-perfect recreation of an e-commerce landing page, focused on careful integration and scroll animations."
+              data-image="/assets/kusmi-tea-landing-page-preview.png"
+              data-image-alt="Kusmi Tea landing page preview"
+              data-demo="https://quentinplet.github.io/test-integration-kusmi-tea/"
+              data-github="https://github.com/quentinplet/test-integration-kusmi-tea"
             >
               <img
                 src="/assets/kusmi-tea-landing-page-preview.png"
@@ -403,7 +415,7 @@
                 width="640"
                 height="200"
               />
-            </a>
+            </button>
             <h3 class="work__title">Kusmi Tea Landing Page</h3>
             <div class="work__links">
               <a
@@ -427,11 +439,15 @@
           </div>
 
           <div class="work__card" data-category="web">
-            <a
-              href="https://react-morty-quentin.vercel.app/"
+            <button
+              type="button"
               class="work__img__link"
-              target="_blank"
-              rel="noopener"
+              data-title="Rick and Morty"
+              data-description="A React app consuming the Rick and Morty API to browse characters and episodes, with search and pagination."
+              data-image="/assets/rick-morty-preview.png"
+              data-image-alt="Rick and Morty project preview"
+              data-demo="https://react-morty-quentin.vercel.app/"
+              data-github="https://github.com/quentinplet/react-morty-quentin"
             >
               <img
                 src="/assets/rick-morty-preview.png"
@@ -441,7 +457,7 @@
                 width="640"
                 height="200"
               />
-            </a>
+            </button>
             <h3 class="work__title">Rick and Morty</h3>
             <div class="work__links">
               <a
@@ -465,11 +481,15 @@
           </div>
 
           <div class="work__card" data-category="audio">
-            <a
-              href="https://quentinplet.github.io/Installation-Curiosity/"
+            <button
+              type="button"
               class="work__img__link"
-              target="_blank"
-              rel="noopener"
+              data-title="Audio Visualizer"
+              data-description="An interactive installation blending the Web Audio API with generative visuals that react to sound in real time."
+              data-image="/assets/Audio-visualizer.png"
+              data-image-alt="Audio Visualizer project preview"
+              data-demo="https://quentinplet.github.io/Installation-Curiosity/"
+              data-github="https://github.com/quentinplet/Installation-Curiosity"
             >
               <img
                 src="/assets/Audio-visualizer.png"
@@ -479,7 +499,7 @@
                 width="640"
                 height="200"
               />
-            </a>
+            </button>
             <h3 class="work__title">Audio Visualizer</h3>
             <div class="work__links">
               <a
@@ -783,6 +803,45 @@
     <a href="#" class="scrollup" aria-label="Scroll to top">
       <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
+
+    <!-- =============== WORK MODAL =============== -->
+    <dialog
+      class="work-modal"
+      id="work-modal"
+      aria-labelledby="work-modal-title"
+    >
+      <button
+        type="button"
+        class="work-modal__close"
+        data-close-modal
+        aria-label="Close"
+      >
+        <i class="uil uil-times"></i>
+      </button>
+      <img src="" alt="" class="work-modal__img" id="work-modal-img" />
+      <h3 class="work-modal__title" id="work-modal-title"></h3>
+      <p class="work-modal__description" id="work-modal-description"></p>
+      <div class="work-modal__links">
+        <a
+          href="#"
+          class="work-modal__link work-modal__link--demo"
+          id="work-modal-demo"
+          target="_blank"
+          rel="noopener"
+        >
+          Demo <i class="bx bx-right-arrow-alt work__button-icon"></i>
+        </a>
+        <a
+          href="#"
+          class="work-modal__link work-modal__link--github"
+          id="work-modal-github"
+          target="_blank"
+          rel="noopener"
+        >
+          Github <i class="bx uil uil-github-alt work__button-icon-github"></i>
+        </a>
+      </div>
+    </dialog>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
     <script src="/js/main.js" defer></script>

@@ -61,6 +61,55 @@ workItems.forEach((item) => {
   });
 });
 
+/*=============== WORK MODAL ===============*/
+const workModal = document.querySelector("#work-modal");
+
+if (workModal) {
+  const workModalImg = document.querySelector("#work-modal-img");
+  const workModalTitle = document.querySelector("#work-modal-title");
+  const workModalDescription = document.querySelector(
+    "#work-modal-description"
+  );
+  const workModalDemo = document.querySelector("#work-modal-demo");
+  const workModalGithub = document.querySelector("#work-modal-github");
+  const workImgLinks = document.querySelectorAll(".work__img__link");
+
+  const openWorkModal = (trigger) => {
+    const { title, description, image, imageAlt, demo, github } =
+      trigger.dataset;
+
+    workModalImg.src = image;
+    workModalImg.alt = imageAlt || "";
+    workModalTitle.textContent = title;
+    workModalDescription.textContent = description;
+    workModalDemo.href = demo;
+    workModalGithub.href = github;
+
+    workModal.showModal();
+  };
+
+  workImgLinks.forEach((trigger) => {
+    trigger.addEventListener("click", () => openWorkModal(trigger));
+  });
+
+  workModal.querySelectorAll("[data-close-modal]").forEach((el) => {
+    el.addEventListener("click", () => workModal.close());
+  });
+
+  // Light-dismiss: close when a click lands on the ::backdrop,
+  // i.e. outside the dialog's own content box.
+  workModal.addEventListener("click", (e) => {
+    const rect = workModal.getBoundingClientRect();
+    const clickedInside =
+      e.clientX >= rect.left &&
+      e.clientX <= rect.right &&
+      e.clientY >= rect.top &&
+      e.clientY <= rect.bottom;
+
+    if (!clickedInside) workModal.close();
+  });
+}
+
 /*=============== EMAIL JS ===============*/
 const contactForm = document.querySelector(".contact__form");
 
