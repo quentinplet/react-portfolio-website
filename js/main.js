@@ -1,3 +1,24 @@
+/*=============== SCROLL REVEAL ===============*/
+const revealElements = document.querySelectorAll(
+  ".work__card, .skills__content, .contact__content"
+);
+
+revealElements.forEach((el) => el.classList.add("reveal"));
+
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal--visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+revealElements.forEach((el) => revealObserver.observe(el));
+
 /*=============== SCROLL HEADER ===============*/
 const header = document.querySelector(".header");
 
