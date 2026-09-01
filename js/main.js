@@ -83,6 +83,17 @@ workItems.forEach((item) => {
 });
 
 /*=============== WORK MODAL ===============*/
+const WORK_TECH_ICONS = {
+  html5: { icon: "devicon-html5-plain colored", label: "HTML" },
+  css3: { icon: "devicon-css3-plain colored", label: "CSS" },
+  sass: { icon: "devicon-sass-original colored", label: "Sass" },
+  javascript: { icon: "devicon-javascript-plain colored", label: "JavaScript" },
+  typescript: { icon: "devicon-typescript-plain colored", label: "TypeScript" },
+  react: { icon: "devicon-react-original colored", label: "React" },
+  nodejs: { icon: "devicon-nodejs-plain colored", label: "Node.js" },
+  webaudio: { icon: "bx bxs-volume-full", label: "Web Audio API" },
+};
+
 const workModal = document.querySelector("#work-modal");
 
 if (workModal) {
@@ -91,12 +102,13 @@ if (workModal) {
   const workModalDescription = document.querySelector(
     "#work-modal-description"
   );
+  const workModalTech = document.querySelector("#work-modal-tech");
   const workModalDemo = document.querySelector("#work-modal-demo");
   const workModalGithub = document.querySelector("#work-modal-github");
   const workImgLinks = document.querySelectorAll(".work__img__link");
 
   const openWorkModal = (trigger) => {
-    const { title, description, image, imageAlt, demo, github } =
+    const { title, description, image, imageAlt, demo, github, tech } =
       trigger.dataset;
 
     workModalImg.src = image;
@@ -105,6 +117,21 @@ if (workModal) {
     workModalDescription.textContent = description;
     workModalDemo.href = demo;
     workModalGithub.href = github;
+
+    workModalTech.innerHTML = "";
+    (tech || "")
+      .split(",")
+      .map((key) => key.trim())
+      .filter(Boolean)
+      .forEach((key) => {
+        const techInfo = WORK_TECH_ICONS[key];
+        if (!techInfo) return;
+
+        const item = document.createElement("span");
+        item.className = "work-modal__tech-item";
+        item.innerHTML = `<i class="${techInfo.icon} work-modal__tech-icon"></i> ${techInfo.label}`;
+        workModalTech.appendChild(item);
+      });
 
     workModal.showModal();
   };
