@@ -1,37 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Quentin Plet — Web &amp; Audio Developer</title>
+    <title>Quentin Plet — Développeur Web &amp; Audio</title>
     <meta
       name="description"
-      content="Quentin Plet, web developer based in France, passionate about web and audio technologies. Portfolio, projects, skills and contact."
+      content="Quentin Plet, développeur web basé en France, passionné par les technologies web et audio. Portfolio, projets, compétences et contact."
     />
     <link rel="canonical" href="https://your-domain.example/" />
-    <link rel="alternate" hreflang="en" href="https://your-domain.example/" />
-    <link rel="alternate" hreflang="fr" href="https://your-domain.example/fr/" />
-    <link rel="alternate" hreflang="x-default" href="https://your-domain.example/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://your-domain.example/en/"
+    />
+    <link rel="alternate" hreflang="fr" href="https://your-domain.example/" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://your-domain.example/"
+    />
 
     <!-- =============== OPEN GRAPH =============== -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Quentin Plet — Web & Audio Developer" />
+    <meta
+      property="og:title"
+      content="Quentin Plet — Développeur Web & Audio"
+    />
     <meta
       property="og:description"
-      content="Quentin Plet, web developer based in France, passionate about web and audio technologies. Portfolio, projects, skills and contact."
+      content="Quentin Plet, développeur web basé en France, passionné par les technologies web et audio. Portfolio, projets, compétences et contact."
     />
     <meta property="og:url" content="https://your-domain.example/" />
-    <meta property="og:image" content="https://your-domain.example/assets/picture-profile.jpg" />
+    <meta
+      property="og:image"
+      content="https://your-domain.example/assets/picture-profile.jpg"
+    />
+    <meta property="og:locale" content="fr_FR" />
 
     <!-- =============== TWITTER CARD =============== -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Quentin Plet — Web & Audio Developer" />
+    <meta
+      name="twitter:title"
+      content="Quentin Plet — Développeur Web & Audio"
+    />
     <meta
       name="twitter:description"
-      content="Quentin Plet, web developer based in France, passionate about web and audio technologies. Portfolio, projects, skills and contact."
+      content="Quentin Plet, développeur web basé en France, passionné par les technologies web et audio. Portfolio, projets, compétences et contact."
     />
-    <meta name="twitter:image" content="https://your-domain.example/assets/picture-profile.jpg" />
+    <meta
+      name="twitter:image"
+      content="https://your-domain.example/assets/picture-profile.jpg"
+    />
 
     <!-- =============== STRUCTURED DATA =============== -->
     <script type="application/ld+json">
@@ -39,7 +60,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Quentin Plet",
-        "jobTitle": "Web & Audio Developer",
+        "jobTitle": "Développeur Web & Audio",
         "url": "https://your-domain.example/",
         "sameAs": [
           "https://github.com/quentinplet",
@@ -58,6 +79,11 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
+    <!-- =============== DEVICON (tech logos) =============== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css"
+    />
 
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
@@ -72,7 +98,7 @@
             <li class="nav__item">
               <a href="#home" class="nav__link active-link">
                 <i class="uil uil-estate nav__icon"></i>
-                Home
+                Accueil
               </a>
             </li>
 
@@ -86,7 +112,7 @@
             <li class="nav__item">
               <a href="#skills" class="nav__link">
                 <i class="uil uil-file-alt nav__icon"></i>
-                Skills
+                Compétences
               </a>
             </li>
 
@@ -98,9 +124,9 @@
             </li>
 
             <li class="nav__item">
-              <a href="/fr/" class="nav__link" hreflang="fr" lang="fr">
+              <a href="/en/" class="nav__link" hreflang="en" lang="en">
                 <i class="uil uil-globe nav__icon"></i>
-                FR
+                EN
               </a>
             </li>
           </ul>
@@ -195,17 +221,18 @@
                   ></path>
                 </svg>
               </h1>
-              <h3 class="home__subtitle">Web Developer</h3>
+              <h3 class="home__subtitle">Développeur Web Full Stack</h3>
               <p class="home__description">
-                I'm a web developer based in France. <br />
-                I'm passionate about web and audio technologies. <br />
-                I'm currently looking for an apprenticeship as a JavaScript
-                front-end developer.
+                Développeur passionné par le web, la musique et l’audio, je
+                conçois des applications et des expériences interactives à la
+                croisée de la technologie et de la musique. Curieux et
+                polyvalent, j’aime explorer de nouvelles technologies et donner
+                vie à des projets innovants et créatifs.
               </p>
 
               <div class="home__button">
                 <a href="#contact" class="button button--flex">
-                  Contact Me
+                  Me contacter
                   <svg
                     class="button__icon"
                     xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +256,7 @@
                   href="/assets/CV-Quentin-Plet.pdf"
                   class="button button--flex"
                 >
-                  Download CV
+                  Télécharger le CV
                   <svg
                     class="button__icon"
                     xmlns="http://www.w3.org/2000/svg"
@@ -280,15 +307,23 @@
                 <path
                   class="wheel"
                   d="M123.359,79.775l0,72.843"
-                  style="fill: none; stroke: var(--title-color); stroke-width: 20px"
+                  style="
+                    fill: none;
+                    stroke: var(--title-color);
+                    stroke-width: 20px;
+                  "
                 ></path>
                 <path
                   id="mouse"
                   d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
-                  style="fill: none; stroke: var(--title-color); stroke-width: 20px"
+                  style="
+                    fill: none;
+                    stroke: var(--title-color);
+                    stroke-width: 20px;
+                  "
                 ></path>
               </svg>
-              <span class="home__scroll-name">Scroll Down</span>
+              <span class="home__scroll-name">Défiler</span>
               <i class="uil uil-arrow-down home__scroll-arrow"></i>
             </a>
           </div>
@@ -298,10 +333,10 @@
       <!-- =============== PORTFOLIO =============== -->
       <section class="work section" id="portfolio">
         <h2 class="section__title">Portfolio</h2>
-        <span class="section__subtitle">Most recent works</span>
+        <span class="section__subtitle">Projets récents</span>
 
         <div class="work__filters">
-          <span class="work__item active-work" data-category="all">all</span>
+          <span class="work__item active-work" data-category="all">tout</span>
           <span class="work__item" data-category="web">web</span>
           <span class="work__item" data-category="audio">audio</span>
         </div>
@@ -316,7 +351,7 @@
             >
               <img
                 src="/assets/Crazee-burger-preview.png"
-                alt="Crazee Burger project preview"
+                alt="Aperçu du projet Crazee Burger"
                 class="work__img"
                 loading="lazy"
                 width="640"
@@ -331,7 +366,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                Demo <i class="bx bx-right-arrow-alt work__button-icon"></i>
+                Démo <i class="bx bx-right-arrow-alt work__button-icon"></i>
               </a>
               <a
                 href="https://github.com/quentinplet/crazee-burger"
@@ -354,7 +389,7 @@
             >
               <img
                 src="/assets/Sampler-preview-2.png"
-                alt="WAM Sampler project preview"
+                alt="Aperçu du projet WAM Sampler"
                 class="work__img"
                 loading="lazy"
                 width="640"
@@ -369,7 +404,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                Demo <i class="bx bx-right-arrow-alt work__button-icon"></i>
+                Démo <i class="bx bx-right-arrow-alt work__button-icon"></i>
               </a>
               <a
                 href="https://github.com/quentinplet/Wam-Sampler"
@@ -392,7 +427,7 @@
             >
               <img
                 src="/assets/kusmi-tea-landing-page-preview.png"
-                alt="Kusmi Tea landing page preview"
+                alt="Aperçu de la landing page Kusmi Tea"
                 class="work__img"
                 loading="lazy"
                 width="640"
@@ -407,7 +442,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                Demo <i class="bx bx-right-arrow-alt work__button-icon"></i>
+                Démo <i class="bx bx-right-arrow-alt work__button-icon"></i>
               </a>
               <a
                 href="https://github.com/quentinplet/test-integration-kusmi-tea"
@@ -430,7 +465,7 @@
             >
               <img
                 src="/assets/rick-morty-preview.png"
-                alt="Rick and Morty project preview"
+                alt="Aperçu du projet Rick and Morty"
                 class="work__img"
                 loading="lazy"
                 width="640"
@@ -445,7 +480,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                Demo <i class="bx bx-right-arrow-alt work__button-icon"></i>
+                Démo <i class="bx bx-right-arrow-alt work__button-icon"></i>
               </a>
               <a
                 href="https://github.com/quentinplet/react-morty-quentin"
@@ -468,7 +503,7 @@
             >
               <img
                 src="/assets/Audio-visualizer.png"
-                alt="Audio Visualizer project preview"
+                alt="Aperçu du projet Audio Visualizer"
                 class="work__img"
                 loading="lazy"
                 width="640"
@@ -483,7 +518,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                Demo <i class="bx bx-right-arrow-alt work__button-icon"></i>
+                Démo <i class="bx bx-right-arrow-alt work__button-icon"></i>
               </a>
               <a
                 href="https://github.com/quentinplet/Installation-Curiosity"
@@ -501,103 +536,149 @@
 
       <!-- =============== SKILLS =============== -->
       <section class="skills section" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <span class="section__subtitle">My technical level</span>
+        <h2 class="section__title">Compétences</h2>
+        <span class="section__subtitle">Technologies</span>
 
         <div class="skills__container container grid">
           <div class="skills__content">
-            <h3 class="skills__title">Web developer</h3>
+            <h3 class="skills__title">Frontend</h3>
             <div class="skills__box">
-              <div class="skills__group">
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">CSS</h3>
-                    <span class="skills__level">Intermediate</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">Javascript</h3>
-                    <span class="skills__level">Advanced</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">React</h3>
-                    <span class="skills__level">Intermediate</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">Typescript</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>
+              <div class="skills__data">
+                <i class="devicon-html5-plain skills__icon colored"></i>
+                <h3 class="skills__name">HTML</h3>
               </div>
-              <div class="skills__group">
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">Git</h3>
-                    <span class="skills__level">Intermediate</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">Node Js</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">PHP</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">Firebase</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>
+              <div class="skills__data">
+                <i class="devicon-css3-plain skills__icon colored"></i>
+                <h3 class="skills__name">CSS</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-javascript-plain skills__icon colored"></i>
+                <h3 class="skills__name">JavaScript</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-typescript-plain skills__icon colored"></i>
+                <h3 class="skills__name">TypeScript</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-react-original skills__icon colored"></i>
+                <h3 class="skills__name">React</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-angular-plain skills__icon skills__icon--angular"></i>
+                <h3 class="skills__name">Angular</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-vuejs-plain skills__icon colored"></i>
+                <h3 class="skills__name">Vue</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-tailwindcss-original skills__icon colored"></i>
+                <h3 class="skills__name">Tailwind</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-sass-original skills__icon colored"></i>
+                <h3 class="skills__name">Sass</h3>
               </div>
             </div>
           </div>
 
           <div class="skills__content">
-            <h3 class="skills__title">Audio developer</h3>
+            <h3 class="skills__title">Backend</h3>
             <div class="skills__box">
-              <div class="skills__group">
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">Max</h3>
-                    <span class="skills__level">Advanced</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">Faust</h3>
-                    <span class="skills__level">Advanced</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="bx bx-badge-check"></i>
-                  <div>
-                    <h3 class="skills__name">PureData</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>
+              <div class="skills__data">
+                <i class="devicon-nodejs-plain skills__icon colored"></i>
+                <h3 class="skills__name">Node.js</h3>
               </div>
-              <div class="skills__group"></div>
+              <div class="skills__data">
+                <i class="devicon-express-original skills__icon colored"></i>
+                <h3 class="skills__name">Express</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-python-plain skills__icon colored"></i>
+                <h3 class="skills__name">Python</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-dotnetcore-plain skills__icon colored"></i>
+                <h3 class="skills__name">ASP.NET</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-laravel-original skills__icon colored"></i>
+                <h3 class="skills__name">PHP (Laravel)</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__content">
+            <h3 class="skills__title">Outils</h3>
+            <div class="skills__box">
+              <div class="skills__data">
+                <i class="devicon-docker-plain skills__icon colored"></i>
+                <h3 class="skills__name">Docker</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-git-plain skills__icon colored"></i>
+                <h3 class="skills__name">Git</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-azure-plain skills__icon colored"></i>
+                <h3 class="skills__name">Azure</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-githubactions-plain skills__icon colored"></i>
+                <h3 class="skills__name">GitHub Actions</h3>
+              </div>
+              <div class="skills__data">
+                <i class="bx bx-terminal skills__icon skills__icon--claude"></i>
+                <h3 class="skills__name">Claude Code</h3>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-bot skills__icon skills__icon--copilot"></i>
+                <h3 class="skills__name">Copilot</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__content">
+            <h3 class="skills__title">Tests &amp; Automatisation</h3>
+            <div class="skills__box">
+              <div class="skills__data">
+                <i class="devicon-playwright-plain skills__icon colored"></i>
+                <h3 class="skills__name">Playwright</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-selenium-original skills__icon colored"></i>
+                <h3 class="skills__name">Selenium</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-cypressio-plain skills__icon colored"></i>
+                <h3 class="skills__name">Cypress</h3>
+              </div>
+              <div class="skills__data">
+                <i class="devicon-jira-plain skills__icon colored"></i>
+                <h3 class="skills__name">Jira</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__content">
+            <h3 class="skills__title">Audio</h3>
+            <div class="skills__box">
+              <div class="skills__data">
+                <i class="bx bx-sitemap skills__icon skills__icon--max"></i>
+                <h3 class="skills__name">Max</h3>
+              </div>
+              <div class="skills__data">
+                <i class="bx bx-code-curly skills__icon skills__icon--faust"></i>
+                <h3 class="skills__name">Faust</h3>
+              </div>
+              <div class="skills__data">
+                <i class="bx bx-git-branch skills__icon skills__icon--puredata"></i>
+                <h3 class="skills__name">PureData</h3>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-volume-full skills__icon skills__icon--webaudio"></i>
+                <h3 class="skills__name">Web Audio API</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -610,20 +691,17 @@
 
         <div class="contact__container container grid">
           <div class="contact__content">
-            <h3 class="contact__title">Contact me</h3>
+            <h3 class="contact__title">Me contacter</h3>
 
             <div class="contact__info">
               <div class="contact__card">
                 <i class="bx bx-mail-send contact__card-icon"></i>
 
-                <h3 class="contact__card-title">Email</h3>
+                <h3 class="contact__card-title">E-mail</h3>
                 <span class="contact__card-data">quentin.plet@gmail.com</span>
 
-                <a
-                  href="mailto:quentin.plet@gmail.com"
-                  class="contact__button"
-                >
-                  Write me
+                <a href="mailto:quentin.plet@gmail.com" class="contact__button">
+                  Écrivez-moi
                   <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                 </a>
               </div>
@@ -631,27 +709,27 @@
           </div>
 
           <div class="contact__content">
-            <h3 class="contact__title">Write me</h3>
+            <h3 class="contact__title">Écrivez-moi</h3>
 
             <form class="contact__form">
               <div class="contact__form-div">
-                <label class="contact__form-tag">Name</label>
+                <label class="contact__form-tag">Nom</label>
                 <input
                   type="text"
                   name="name"
                   class="contact__form-input"
-                  placeholder="Insert your name"
+                  placeholder="Indiquez votre nom"
                   required
                 />
               </div>
 
               <div class="contact__form-div">
-                <label class="contact__form-tag">Mail</label>
+                <label class="contact__form-tag">E-mail</label>
                 <input
                   type="email"
                   name="email"
                   class="contact__form-input"
-                  placeholder="Insert your email"
+                  placeholder="Indiquez votre e-mail"
                   required
                 />
               </div>
@@ -663,13 +741,13 @@
                   cols="30"
                   rows="10"
                   class="contact__form-input"
-                  placeholder="Write your message"
+                  placeholder="Écrivez votre message"
                   required
                 ></textarea>
               </div>
 
               <button class="button button--flex" type="submit">
-                Send Message
+                Envoyer le message
                 <svg
                   class="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -700,9 +778,9 @@
         <h1 class="footer__title">Quentin Plet</h1>
 
         <ul class="footer__list">
-          <li><a href="#home" class="footer__link">Home</a></li>
-          <li><a href="#portfolio" class="footer__link">Projects</a></li>
-          <li><a href="#skills" class="footer__link">Skills</a></li>
+          <li><a href="#home" class="footer__link">Accueil</a></li>
+          <li><a href="#portfolio" class="footer__link">Projets</a></li>
+          <li><a href="#skills" class="footer__link">Compétences</a></li>
         </ul>
         <div class="footer__social">
           <a
@@ -724,16 +802,19 @@
         </div>
 
         <span class="footer__copy">
-          &#169; 2026 Quentin Plet. All right reserved
+          &#169; 2026 Quentin Plet. Tous droits réservés
         </span>
       </div>
     </footer>
 
-    <a href="#" class="scrollup" aria-label="Scroll to top">
+    <a href="#" class="scrollup" aria-label="Retour en haut de la page">
       <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      defer
+    ></script>
     <script src="/js/main.js" defer></script>
   </body>
 </html>

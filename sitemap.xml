@@ -5,17 +5,17 @@
 >
   <url>
     <loc>https://your-domain.example/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://your-domain.example/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://your-domain.example/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://your-domain.example/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://your-domain.example/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://your-domain.example/" />
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://your-domain.example/fr/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://your-domain.example/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://your-domain.example/fr/" />
+    <loc>https://your-domain.example/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://your-domain.example/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://your-domain.example/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://your-domain.example/" />
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
