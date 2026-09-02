@@ -112,7 +112,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 6rem 0 2rem;
+  padding: 1rem 0 2rem;
 }
 
 .section__title {
@@ -151,7 +151,9 @@ img {
 .reveal {
   opacity: 0;
   transform: translateY(2.5rem);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reveal.reveal--visible {
@@ -252,24 +254,60 @@ img {
 }
 
 /*=============== HOME ===============*/
+.home {
+  position: relative;
+  background-color: var(--body-color);
+  background-image:
+    linear-gradient(
+      to bottom,
+      var(--body-color) 0,
+      rgba(10, 20, 40, 0.2) 12px,
+      rgba(10, 20, 40, 0.1) 20%,
+      rgba(10, 20, 40, 0.1) calc(100% - 12px),
+      var(--body-color) 100%
+    ),
+    url(../assets/banniere_2.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  /* A bare gradient has no intrinsic ratio, so "contain" makes it fill the
+     whole box instead of matching the image below it. Give both layers the
+     same explicit size (the image's native ratio scaled to the section's
+     width) so the fade/scrim lines up exactly with the visible image. */
+  background-size:
+    100% calc(100vw * 394 / 1879),
+    100% calc(100vw * 394 / 1879);
+}
+
+.home .button {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.home__container.container {
+  max-width: 1200px;
+}
+
 .home__container {
   row-gap: 7rem;
 }
 
 .home__content {
-  grid-template-columns: 116px repeat(2, 1fr);
+  grid-template-columns: max-content 300px;
+  justify-content: left;
   padding-top: 5.5rem;
-  column-gap: 2rem;
+  column-gap: 0.5rem;
   align-items: center;
+  column-gap: 2rem;
 }
 
 .home__social {
-  display: grid;
-  grid-template-columns: max-content;
-  row-gap: 1rem;
+  display: flex;
+  column-gap: 1.25rem;
+  margin-bottom: var(--mb-1-5);
 }
 
 .home__social-icon {
+  display: inline-flex;
+  align-items: center;
   font-size: 1.25rem;
   color: var(--title-color);
 }
@@ -289,6 +327,7 @@ img {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-0-25);
   white-space: nowrap;
+  color: var(--title-color);
 }
 
 .home__hand {
@@ -348,8 +387,16 @@ img {
 }
 
 .home__description {
-  max-width: 400px;
+  width: 100%;
   margin-bottom: var(--mb-3);
+}
+
+.home__data {
+  background-color: var(--container-color);
+  max-width: 700px;
+  padding: 1.75rem 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
 
 .home__img {
@@ -366,7 +413,7 @@ img {
 }
 
 .home__scroll {
-  margin-left: 9.25rem;
+  margin-left: 0;
 }
 
 .wheel {
@@ -987,8 +1034,12 @@ dialog.work-modal[open]::backdrop {
   }
 
   .home__content {
-    grid-template-columns: 100px repeat(2, 1fr);
-    column-gap: 1.25rem;
+    grid-template-columns: max-content 250px;
+    column-gap: 0.5rem;
+  }
+
+  .home__data {
+    padding: 1.5rem 1.75rem;
   }
 
   .home__title {
@@ -1022,7 +1073,7 @@ dialog.work-modal[open]::backdrop {
   }
 
   .home__scroll {
-    margin-left: 7.5rem;
+    margin-left: 0;
   }
 
   .work__container {
@@ -1145,14 +1196,11 @@ dialog.work-modal[open]::backdrop {
   }
 
   .home__social {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    column-gap: 1.5rem;
   }
 
   .home__img {
-    order: initial;
+    order: 0;
     justify-self: center;
     box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
     width: 200px;
@@ -1160,15 +1208,24 @@ dialog.work-modal[open]::backdrop {
   }
 
   .home__data {
-    grid-column: 1/3;
+    order: 1;
+    width: 100%;
+    max-width: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1.5rem;
   }
 
   .home__data .home__description {
-    width: 70%;
+    width: 100%;
     text-align: center;
+  }
+
+  .home__button {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.75rem;
   }
 
   .home__scroll {
