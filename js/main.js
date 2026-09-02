@@ -92,6 +92,17 @@ const WORK_TECH_ICONS = {
   react: { icon: "devicon-react-original colored", label: "React" },
   nodejs: { icon: "devicon-nodejs-plain colored", label: "Node.js" },
   webaudio: { icon: "bx bxs-volume-full", label: "Web Audio API" },
+  angular: { icon: "devicon-angular-plain work-modal__tech-icon--angular", label: "Angular" },
+  vuejs: { icon: "devicon-vuejs-plain colored", label: "Vue" },
+  dotnetcore: { icon: "devicon-dotnetcore-plain colored", label: "ASP.NET Core" },
+  laravel: { icon: "devicon-laravel-original colored", label: "Laravel" },
+  postgresql: { icon: "devicon-postgresql-plain colored", label: "PostgreSQL" },
+  mysql: { icon: "devicon-mysql-plain colored", label: "MySQL" },
+  azure: { icon: "devicon-azure-plain colored", label: "Azure" },
+  docker: { icon: "devicon-docker-plain colored", label: "Docker" },
+  claudecode: { icon: "bx bx-terminal work-modal__tech-icon--claude", label: "Claude Code" },
+  neon: { icon: "uil uil-database work-modal__tech-icon--neon", label: "Neon" },
+  railway: { icon: "devicon-railway-original work-modal__tech-icon--railway", label: "Railway" },
 };
 
 const workModal = document.querySelector("#work-modal");
