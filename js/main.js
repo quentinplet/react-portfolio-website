@@ -171,9 +171,27 @@ if (workModal) {
 
 /*=============== EMAIL JS ===============*/
 const contactForm = document.querySelector(".contact__form");
+const contactFormButton = document.querySelector(".contact__form-button");
+const contactFormStatus = document.querySelector("#contact-form-status");
+
+const CONTACT_FORM_MESSAGES =
+  document.documentElement.lang === "en"
+    ? {
+        success: "Message sent successfully!",
+        error: "Something went wrong. Please try again.",
+      }
+    : {
+        success: "Message envoyé avec succès !",
+        error: "Une erreur est survenue, veuillez réessayer.",
+      };
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  contactFormButton.classList.add("contact__form-button--loading");
+  contactFormButton.disabled = true;
+  contactFormStatus.textContent = "";
+  contactFormStatus.className = "contact__form-status";
 
   emailjs
     .sendForm(
@@ -185,9 +203,17 @@ contactForm.addEventListener("submit", (e) => {
     .then(
       () => {
         contactForm.reset();
+        contactFormStatus.textContent = CONTACT_FORM_MESSAGES.success;
+        contactFormStatus.classList.add("contact__form-status--success");
       },
       (error) => {
         console.error(error.text);
+        contactFormStatus.textContent = CONTACT_FORM_MESSAGES.error;
+        contactFormStatus.classList.add("contact__form-status--error");
       }
-    );
+    )
+    .finally(() => {
+      contactFormButton.classList.remove("contact__form-button--loading");
+      contactFormButton.disabled = false;
+    });
 });

@@ -312,6 +312,7 @@
       <section class="work section" id="portfolio">
         <h2 class="section__title">Portfolio</h2>
         <span class="section__subtitle">Most recent works</span>
+        <p class="work__hint">Click an image to learn more</p>
 
         <div class="work__filters">
           <span class="work__item active-work" data-category="all">all</span>
@@ -760,8 +761,12 @@
                 ></textarea>
               </div>
 
-              <button class="button button--flex" type="submit">
-                Send Message
+              <button
+                class="button button--flex contact__form-button"
+                type="submit"
+              >
+                <span class="contact__form-button-text">Send Message</span>
+                <span class="contact__form-spinner" aria-hidden="true"></span>
                 <svg
                   class="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -780,6 +785,13 @@
                   ></path>
                 </svg>
               </button>
+
+              <p
+                class="contact__form-status"
+                id="contact-form-status"
+                role="status"
+                aria-live="polite"
+              ></p>
             </form>
           </div>
         </div>
