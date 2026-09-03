@@ -264,7 +264,18 @@ img {
 /*=============== HOME ===============*/
 .home {
   position: relative;
+  z-index: 0;
   background-color: var(--body-color);
+}
+
+/* The banner lives on its own layer (rather than directly on .home) so it
+   can fade in on its own without dragging the card/text content's opacity
+   along with it. */
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background-image:
     linear-gradient(
       to bottom,
@@ -274,7 +285,7 @@ img {
       rgba(10, 20, 40, 0.1) calc(100% - 12px),
       var(--body-color) 100%
     ),
-    url(../assets/banniere_2.jpg);
+    url(../assets/banniere_2.webp);
   background-repeat: no-repeat;
   background-position: top;
   /* A bare gradient has no intrinsic ratio, so "contain" makes it fill the
@@ -284,6 +295,21 @@ img {
   background-size:
     100% calc(100vw * 394 / 1879),
     100% calc(100vw * 394 / 1879);
+  opacity: 0;
+  animation: fade-in 1s ease forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home::before {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .home .button {
@@ -408,7 +434,7 @@ img {
 }
 
 .home__img {
-  background: url(../assets/profil-pic.png);
+  background: url(../assets/profil-pic.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -529,11 +555,25 @@ img {
   height: 200px;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.4s ease, filter 0.4s ease;
+}
+
+.work__img.is-loaded {
+  opacity: 1;
 }
 
 .work__img:hover {
   transform: scale(1.01);
   filter: brightness(0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work__img,
+  .work-modal__img {
+    opacity: 1;
+    transition: none;
+  }
 }
 
 .work__title {
@@ -680,6 +720,12 @@ dialog.work-modal[open]::backdrop {
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.work-modal__img.is-loaded {
+  opacity: 1;
 }
 
 .work-modal__title {

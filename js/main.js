@@ -19,6 +19,19 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach((el) => revealObserver.observe(el));
 
+/*=============== IMAGE FADE-IN ===============*/
+const fadeInOnLoad = (img) => {
+  if (img.complete && img.naturalWidth > 0) {
+    img.classList.add("is-loaded");
+  } else {
+    img.addEventListener("load", () => img.classList.add("is-loaded"), {
+      once: true,
+    });
+  }
+};
+
+document.querySelectorAll(".work__img").forEach(fadeInOnLoad);
+
 /*=============== SCROLL HEADER ===============*/
 const header = document.querySelector(".header");
 
@@ -122,8 +135,10 @@ if (workModal) {
     const { title, description, image, imageAlt, demo, github, tech } =
       trigger.dataset;
 
+    workModalImg.classList.remove("is-loaded");
     workModalImg.src = image;
     workModalImg.alt = imageAlt || "";
+    fadeInOnLoad(workModalImg);
     workModalTitle.textContent = title;
     workModalDescription.textContent = description;
     workModalDemo.href = demo;
