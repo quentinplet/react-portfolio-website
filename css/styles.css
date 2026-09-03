@@ -243,6 +243,14 @@ img {
   display: none;
 }
 
+.nav__mobile-actions {
+  display: none;
+}
+
+.nav__lang {
+  display: none;
+}
+
 .active-link,
 .nav__link:hover {
   color: var(--title-color-dark);
@@ -291,7 +299,7 @@ img {
 }
 
 .home__content {
-  grid-template-columns: max-content 300px;
+  grid-template-columns: auto 250px;
   justify-content: left;
   padding-top: 5.5rem;
   column-gap: 0.5rem;
@@ -400,7 +408,7 @@ img {
 }
 
 .home__img {
-  background: url(../assets/picture-profile.jpg);
+  background: url(../assets/profil-pic.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1050,6 +1058,13 @@ dialog.work-modal[open]::backdrop {
 }
 
 /*=============== BREAKPOINTS ===============*/
+
+@media screen and (max-width: 1440px) {
+  .home__content {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+}
 /* For large devices */
 @media screen and (max-width: 992px) {
   .container {
@@ -1071,7 +1086,7 @@ dialog.work-modal[open]::backdrop {
   }
 
   .home__content {
-    grid-template-columns: max-content 250px;
+    grid-template-columns: auto 250px;
     column-gap: 0.5rem;
   }
 
@@ -1163,6 +1178,15 @@ dialog.work-modal[open]::backdrop {
     padding: 2rem 0 4rem;
   }
 
+  /* On narrow screens the stacked layout puts the photo above the card,
+     so the banner only needs to fill that top area (behind the photo),
+     not the whole hero down to the card. Fix the height and let the width
+     scale automatically to keep the image's own aspect ratio. */
+  .home {
+    background-position: top center;
+    background-size: auto 320px;
+  }
+
   .section__subtitle {
     margin-bottom: var(--mb-3);
   }
@@ -1224,6 +1248,25 @@ dialog.work-modal[open]::backdrop {
   .nav__close,
   .nav__toggle {
     display: block;
+  }
+
+  .nav__mobile-actions {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  .nav__lang {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    font-size: var(--small-font-size);
+  }
+
+  .nav__lang:hover {
+    color: var(--title-color-dark);
   }
 
   .home__content {
